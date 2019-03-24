@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+        <div class="watermark-logo"/>
     <div class="footer-box1">
       <svg class="footer-box__shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 161">
         <path d="M-11.925-4809v-154.746c40.454,19.75,273.683,130.936,420.544,142.612,161.25,12.821,339.978-42.709,521.543-86.3,169.82-40.769,395.43,29.2,423.912,38.429v60Z" transform="translate(11.926 4970)"/>
@@ -30,7 +31,6 @@
         <div class="column sm-50 footer-card">
           <lazy-load v-if="getAuthor.length">
             <card-author class="footer__card-author" :shadow="false" :author="getAuthor[0]" />
-            <div class="watermark-logo"></div>
           </lazy-load>
         </div>
         <div class="column sm-50 footer-nav">
@@ -72,18 +72,18 @@
         <div class="column sm-100 footer-copy" v-html="$themeLocaleConfig.copy"></div>        
       </div>
 
-      <span class="shapes shapes--circle" style="left: 3%; top: -20%"></span>
-      <span class="shapes shapes--primary shapes--color3" style="left: 30%; top: -15%"></span>
-      <span class="shapes shapes--primary" style="left: 13%; top: -80%; transform: rotate(45deg)"></span>
-      <span class="shapes shapes--circle shapes--color4" style="left: 40%; top: 200px"></span>
-      <span class="shapes shapes--primary" style="left: 15%; bottom: 10%; transform: rotate(75deg)"></span>
-      <span class="shapes shapes--circle shapes--color3" style="right: 50%; top: 30%"></span>
-      <span class="shapes shapes--primary" style="right: 20%; top: -100%"></span>
-      <span class="shapes shapes--circle" style="right: 10%; top: -20%"></span>
-      <span class="shapes shapes--color4" style="right: 35%; top: -20%; transform: rotate(45deg)"></span>
-      <span class="shapes shapes--circle" style="left: 40%; top: -50%"></span>
-      <span class="shapes shapes--color3" style="right: 30%; top: 20%"></span>
-      <span class="shapes shapes--circle shapes--primary" style="right: 30%; bottom: 20%"></span>
+      <!-- <span class="shapes shapes--circle" style="left: 3%; top: -20%"></span> -->
+      <!-- <span class="shapes shapes--primary shapes--color3" style="left: 30%; top: -15%"></span> -->
+      <!-- <span class="shapes shapes--primary" style="left: 13%; top: -80%; transform: rotate(45deg)"></span> -->
+      <!-- <span class="shapes shapes--circle shapes--color4" style="left: 40%; top: 200px"></span> -->
+      <!-- <span class="shapes shapes--primary" style="left: 15%; bottom: 10%; transform: rotate(75deg)"></span> -->
+      <!-- <span class="shapes shapes--circle shapes--color3" style="right: 50%; top: 30%"></span> -->
+      <!-- <span class="shapes shapes--primary" style="right: 20%; top: -100%"></span> -->
+      <!-- <span class="shapes shapes--circle" style="right: 10%; top: -20%"></span> -->
+      <!-- <span class="shapes shapes--color4" style="right: 35%; top: -20%; transform: rotate(45deg)"></span> -->
+      <!-- <span class="shapes shapes--circle" style="left: 40%; top: -50%"></span> -->
+      <!-- <span class="shapes shapes--color3" style="right: 30%; top: 20%"></span> -->
+      <!-- <span class="shapes shapes--circle shapes--primary" style="right: 30%; bottom: 20%"></span> -->
     </section>    
   </footer>
 </template>
@@ -114,6 +114,7 @@
 .footer
   position: relative
   overflow: hidden
+  
 
 .footer-box__shape
   position: absolute
@@ -181,16 +182,16 @@
     margin-right: 8px
 
 .watermark-logo
-  position: absolute
-  top: -150px
-  left: -30px
-  width: 472px
-  height: 429px
+  position: fixed
+  top: 0px
+  left: 0px
+  width: 100%
+  height: 100%
   background-image: url('/watermark-logo.png')
   background-size: cover
   background-repeat: no-repeat
-  z-index: 5
-
+  z-index: -1
+  
 .footer-nav
   padding-right: 4vw !important
   z-index: 6

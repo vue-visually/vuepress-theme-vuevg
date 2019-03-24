@@ -1,7 +1,7 @@
 {
-  "name": "vuepress-theme-ktquez",
+  "name": "vuepress-theme-vuevg",
   "version": "0.2.18",
-  "description": "A blog theme for VuePress by Ktquez",
+  "description": "A blog theme for VuePress by vuevg",
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
     "build": "node_modules/.bin/vuepress build src",
@@ -10,24 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ktquez/vuepress-theme-ktquez.git"
+    "url": "git+ssh://git@github.com/vuevg/vuepress-theme-vuevg.git"
   },
   "keywords": [
     "vuepress",
     "theme",
-    "ktquez",
+    "vuevg",
     "vuejs",
     "static",
     "jekyll",
     "documentation",
     "blog"
   ],
-  "author": "Alan Ktquez <ktquez@gmail.com> (https://ktquez.com/)",
+  "author": "Mark Stacey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ktquez/vuepress-theme-ktquez/issues"
+    "url": "https://github.com/vuevg/vuepress-theme-vuevg/issues"
   },
-  "homepage": "https://github.com/ktquez/vuepress-theme-ktquez#readme",
+  "homepage": "https://github.com/vuevg/vuepress-theme-vuevg#readme",
   "dependencies": {
     "carbon-grid": "^1.1.2",
     "elevator.js": "^1.0.1",

@@ -1,16 +1,16 @@
 <template>
-  <div class="hamburguer" :class="{ 'hamburguer--open': open }" @click="$emit('click')">
-    <div class="hamburguer__wrapper">
-      <span class="hamburguer__line"></span>
-      <span class="hamburguer__line"></span>
-      <span class="hamburguer__line"></span>
+  <div class="Hamburger" :class="{ 'Hamburger--open': open }" @click="$emit('click')">
+    <div class="Hamburger__wrapper">
+      <span class="Hamburger__line"></span>
+      <span class="Hamburger__line"></span>
+      <span class="Hamburger__line"></span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MenuHamburguer',
+  name: 'MenuHamburger',
 
   props: {
     open: Boolean
@@ -21,7 +21,7 @@ export default {
 <style lang="stylus">
 @import '~@theme/styles/config.styl'
 
-.hamburguer
+.Hamburger
   width: 44px
   height: 44px
   cursor: pointer
@@ -59,7 +59,7 @@ export default {
       width: 80%
 
   &--open
-    .hamburguer__line
+    .Hamburger__line
       &:nth-child(1)
         top: 8px;
         transform: rotate(135deg)

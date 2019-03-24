@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress-theme-ktquez</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b8af1c3c.css" as="style"><link rel="preload" href="/assets/js/app.7660fa50.js" as="script"><link rel="preload" href="/assets/js/4.f50508c8.js" as="script"><link rel="prefetch" href="/assets/js/2.37f99e05.js"><link rel="prefetch" href="/assets/js/3.61620e5c.js"><link rel="prefetch" href="/assets/js/5.0e864a5a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b8af1c3c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-exact-active router-link-active"></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="vuepress-theme-ktquez"><a href="#vuepress-theme-ktquez" aria-hidden="true" class="header-anchor">#</a> vuepress-theme-ktquez</h1> <p>A blog theme for VuePress by Ktquez 🤘🤘</p> <blockquote><p>Vuepress does not yet have native support for blogs, but this theme has some practices and customizations to turn into a blog.</p></blockquote> <h2 id="vuepress-theme-ktquez-starter"><a href="#vuepress-theme-ktquez-starter" aria-hidden="true" class="header-anchor">#</a> Vuepress theme ktquez starter</h2> <p>I know the theme configuration seems like a lot of work though, I've created a <a href="https://github.com/ktquez/vuepress-theme-ktquez-starter" target="_blank" rel="noopener noreferrer">boilerplate<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> with the settings and structure of folders organized, just clone the repository and change the information for your blog, modify the images and start using.</p> <p>https://github.com/ktquez/vuepress-theme-ktquez-starter</p> <hr> <h2 id="table-of-contents"><a href="#table-of-contents" aria-hidden="true" class="header-anchor">#</a> Table of Contents</h2> <ul><li><a href="#installation">Installation</a></li> <li><a href="#configuration">Configuration</a></li> <li><a href="#translations-of-the-theme">Translations</a></li> <li><a href="#newsletter">Newsletter</a></li> <li><a href="#responsive-post-cover">Responsive images</a></li> <li><a href="#structure-directores-suggestion">Structure</a></li> <li><a href="#frontmatter">Frontmatter</a></li> <li><a href="#override-css-stylus">Override CSS</a></li> <li><a href="#the-best-pratice-of-accessibility-includes">Accessibility</a></li> <li><a href="#lazy-load">Lazy-Load</a></li> <li><a href="#and-more">And more</a></li> <li><a href="#tools">Tools</a></li></ul> <h2 id="installation"><a href="#installation" aria-hidden="true" class="header-anchor">#</a> Installation</h2> <div class="language-shell extra-class"><pre class="language-text"><code>npm install -S vuepress-theme-ktquez
+</code></pre></div><h2 id="configuration"><a href="#configuration" aria-hidden="true" class="header-anchor">#</a> Configuration</h2> <p>The theme customization is done through the <code>.vuepress/config.js</code><br>
+For your reference, you can see the <a href="https://github.com/ktquezplay/webapp/blob/master/src/.vuepress/config.js" target="_blank" rel="noopener noreferrer">config.js of my blog<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  theme<span class="token punctuation">:</span> <span class="token string">'ktquez'</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>              <span class="token comment">// Example with multiple locales, but usually works only with a single locale</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'en'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/pt/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'pt-br'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/es/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'es'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token comment">// example below</span>
+  <span class="token function">configureWebpack</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        alias<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'@public'</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./public'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="themeconfig"><a href="#themeconfig" aria-hidden="true" class="header-anchor">#</a> themeConfig</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      languages<span class="token punctuation">:</span> <span class="token punctuation">{</span>                              <span class="token comment">// Used in the drop down of languages</span>
+        label<span class="token punctuation">:</span> <span class="token string">'English'</span><span class="token punctuation">,</span> 
+        shortname<span class="token punctuation">:</span> <span class="token string">'EN'</span> 
+       <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+      translation<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>                          <span class="token comment">// Look for the &quot;translations section&quot; below</span>
+      logo<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+        name<span class="token punctuation">:</span> <span class="token string">'MY_LOGO_FILENAME'</span><span class="token punctuation">,</span> 
+        ext<span class="token punctuation">:</span> <span class="token string">'png'</span><span class="token punctuation">,</span> 
+        alt<span class="token punctuation">:</span> <span class="token string">'My description about logo'</span> 
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      share<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+        facebookCaption<span class="token punctuation">:</span> <span class="token string">'MY_CAPTION_FB_SHARE'</span><span class="token punctuation">,</span> 
+        twitterVia<span class="token punctuation">:</span> <span class="token string">'MY_TWITTER_NICKNAME'</span> 
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      newsletter<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        provider<span class="token punctuation">:</span> <span class="token string">'mailchimp'</span><span class="token punctuation">,</span>                  <span class="token comment">// Currently supports mailchimp</span>
+        action<span class="token punctuation">:</span> <span class="token string">'link_form_action_mailchimp'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      copy<span class="token punctuation">:</span> <span class="token string">'2018 © Ktquez play - &lt;a href=&quot;https://vuepress.vuejs.org/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt; MADE WITH VUEPRESS &lt;/a&gt;'</span><span class="token punctuation">,</span>
+      footer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        nav1<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">'NAVIGATION 1'</span><span class="token punctuation">,</span>                
+          items<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              label<span class="token punctuation">:</span> <span class="token string">'ABOUT'</span><span class="token punctuation">,</span>
+              path<span class="token punctuation">:</span> <span class="token string">'/about/'</span>                         <span class="token comment">// Use &quot;link&quot; for external links and &quot;path&quot; for internal links</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token operator">...</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        nav2<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">'NAVIGATION 2'</span><span class="token punctuation">,</span>                 
+          items<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              label<span class="token punctuation">:</span> <span class="token string">'Slack Group'</span><span class="token punctuation">,</span>
+              link<span class="token punctuation">:</span> <span class="token string">'https://my_group.slack.com/'</span>     <span class="token comment">// Use &quot;link&quot; for external links and &quot;path&quot; for internal links</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token operator">...</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      social<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+        <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'twitter'</span><span class="token punctuation">,</span>                        <span class="token comment">// Look for the &quot;social icon section&quot; below</span>
+          link<span class="token punctuation">:</span> <span class="token string">'https://www.twitter.com/ktquez'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/pt/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      languages<span class="token punctuation">:</span> <span class="token punctuation">{</span>                              <span class="token comment">// Used in the drop down of languages</span>
+        label<span class="token punctuation">:</span> <span class="token string">'Portuguese'</span><span class="token punctuation">,</span> 
+        shortname<span class="token punctuation">:</span> <span class="token string">'PT'</span> 
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token operator">...</span>  <span class="token comment">// the rest of the properties of this locale are the same as the example above, but with information for that language</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/es/'</span><span class="token punctuation">:</span> <span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  disqus<span class="token punctuation">:</span> <span class="token string">'MY_DISQUS_SHORTNAME'</span><span class="token punctuation">,</span>
+  url<span class="token punctuation">:</span> <span class="token string">'https://my_doamin.com'</span><span class="token punctuation">,</span>
+  cdn<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>                              <span class="token comment">// If there is a CDN, put the bucket link here.</span>
+  blackWhite<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                     <span class="token comment">// Active toggle for Nocturne mode</span>
+  topNavigation<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                  <span class="token comment">// Turn on the navigation menu above the header</span>
+  searchMaxSuggestions<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span>              <span class="token comment">// Maximum result per search</span>
+  responsive<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    active<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                       <span class="token comment">// Turn on responsive images on the cover of the post</span>
+    ext<span class="token punctuation">:</span> <span class="token string">'png'</span><span class="token punctuation">,</span>
+    breakpoints<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">320</span><span class="token punctuation">,</span> <span class="token number">427</span><span class="token punctuation">,</span> <span class="token number">524</span><span class="token punctuation">,</span> <span class="token number">680</span><span class="token punctuation">]</span>   <span class="token comment">// Breakpoints used for picture media tag</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  share<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    facebook<span class="token punctuation">:</span> <span class="token punctuation">{</span> appId<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> version<span class="token punctuation">:</span> <span class="token string">'v3.1'</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  elevator<span class="token punctuation">:</span> <span class="token punctuation">{</span> duration<span class="token punctuation">:</span> <span class="token number">4000</span><span class="token punctuation">,</span> mainAudio<span class="token punctuation">:</span> <span class="token string">'/music/elevator.mp3'</span><span class="token punctuation">,</span> endAudio<span class="token punctuation">:</span> <span class="token string">'/music/ding.mp3'</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+</code></pre></div><h2 id="translations-of-the-theme"><a href="#translations-of-the-theme" aria-hidden="true" class="header-anchor">#</a> Translations of the theme</h2> <p>The texts that are in the theme are translated and currently the theme has included the translations for <code>EN</code> and<code>PT</code>, any other language you will use, just add the <code>key: value</code> in the translation property that the theme will do rest for you.</p> <div class="language-js extra-class"><pre class="language-js"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'/es/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      languages<span class="token punctuation">:</span> <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'Spanish'</span><span class="token punctuation">,</span> shortname<span class="token punctuation">:</span> <span class="token string">'ES'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      translation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        back<span class="token punctuation">:</span> <span class="token string">'Atrás'</span><span class="token punctuation">,</span>
+        home<span class="token punctuation">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+        author<span class="token punctuation">:</span> <span class="token string">'Autor'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/fr/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      languages<span class="token punctuation">:</span> <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'French'</span><span class="token punctuation">,</span> shortname<span class="token punctuation">:</span> <span class="token string">'FR'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      translation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        back<span class="token punctuation">:</span> <span class="token string">'arrière'</span><span class="token punctuation">,</span>
+        home<span class="token punctuation">:</span> <span class="token string">'Page d\'accueil'</span><span class="token punctuation">,</span>
+        author<span class="token punctuation">:</span> <span class="token string">'auteur'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>For you to see all the <code>key: value</code> used in the theme, just access <a href="https://github.com/ktquez/vuepress-theme-ktquez/blob/master/plugins/Translation/locales/en.js" target="_blank" rel="noopener noreferrer">this example<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="newsletter"><a href="#newsletter" aria-hidden="true" class="header-anchor">#</a> Newsletter</h2> <p>To make the newsletter form appear, simply add the action of your newsletter.</p> <div class="language-js extra-class"><pre class="language-js"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+      newsletter<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        provider<span class="token punctuation">:</span> <span class="token string">'mailchimp'</span><span class="token punctuation">,</span>
+        action<span class="token punctuation">:</span> <span class="token string">'MY_ACTION_FOR_ENGLISH_USERS'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/pt/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+      newsletter<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        provider<span class="token punctuation">:</span> <span class="token string">'mailchimp'</span><span class="token punctuation">,</span>
+        action<span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment">// Does not display the form if you leave an empty string</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="responsive-post-cover"><a href="#responsive-post-cover" aria-hidden="true" class="header-anchor">#</a> Responsive post cover</h2> <p>To improve UX and performance, the blog supports responsive images through breakpoints.</p> <div class="language-js extra-class"><pre class="language-js"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  responsive<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    active<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Turn on responsive images on the cover of the post</span>
+    ext<span class="token punctuation">:</span> <span class="token string">'png'</span><span class="token punctuation">,</span>
+    breakpoints<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">320</span><span class="token punctuation">,</span> <span class="token number">427</span><span class="token punctuation">,</span> <span class="token number">524</span><span class="token punctuation">,</span> <span class="token number">680</span><span class="token punctuation">]</span> <span class="token comment">// Breakpoints used for picture media tag</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>With the example above, you need to insert the images with the final <code>,w_XXX</code>, for example:</p> <p>If your post is: <code>/posts/my-first-post.md</code><br>
+Your images should be in <code>public/images/posts/__YEAR__/__MONTH__/</code> and with the following sizes:</p> <ul><li><code>public/images/posts/2018/8/my-first-post,w_320.png</code></li> <li><code>public/images/posts/2018/8/my-first-post,w_427.png</code></li> <li><code>public/images/posts/2018/8/my-first-post,w_524.png</code></li> <li><code>public/images/posts/2018/8/my-first-post,w_680.png</code></li> <li><code>public/images/posts/2018/8/my-first-post.png</code></li></ul> <p><strong>If you don't want to use responsive images, simply disable and to use <code>public/images/posts/2018/8/my-first-post.png</code></strong></p> <h1 id="structure-directores-suggestion"><a href="#structure-directores-suggestion" aria-hidden="true" class="header-anchor">#</a> Structure directores (Suggestion)</h1> <div class="language- extra-class"><pre class="language-text"><code>├── .vuepress
+├── index.md
+├── about/
+|   ├── README.md
+├── contact/
+|   ├── README.md
+├── categories/
+|   ├── README.md
+|   ├── category1.md
+|   ├── category2.md
+├── posts/
+|   ├── README.md
+|   ├── my-first-post.md
+├── pt/
+|   ├── index.md
+|   ├── sobre/
+|   |   ├── README.md
+|   ├── contato/
+|   |   ├── README.md
+|   ├── categorias
+|   |   ├── README.md
+|   |   ├── categoria1.md
+|   |   ├── categoria2.md
+|   ├── posts/
+|   |   ├── README.md
+|   |   ├── meu-primeiro-post.md
+├── es/
+...
+</code></pre></div><p><strong>There are <code>key: value</code> in <a href="https://github.com/ktquez/vuepress-theme-ktquez/blob/master/plugins/Translation/locales/en.js#L46" target="_blank" rel="noopener noreferrer">translations of routes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, if you do not have your language or want to rename, just add in translation translation</strong></p> <h1 id="frontmatter"><a href="#frontmatter" aria-hidden="true" class="header-anchor">#</a> Frontmatter</h1> <h2 id="home"><a href="#home" aria-hidden="true" class="header-anchor">#</a> Home</h2> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">view</span><span class="token punctuation">:</span> home
+<span class="token key atrule">title</span><span class="token punctuation">:</span> my title
+<span class="token key atrule">description</span><span class="token punctuation">:</span> my description
+<span class="token key atrule">meta</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">property</span><span class="token punctuation">:</span> og<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain.com/share/my<span class="token punctuation">-</span>site<span class="token punctuation">-</span>image<span class="token punctuation">-</span>share.png
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> twitter<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain.com/share/my<span class="token punctuation">-</span>site<span class="token punctuation">-</span>image<span class="token punctuation">-</span>share.png
+<span class="token punctuation">---</span>
+</code></pre></div><h2 id="post"><a href="#post" aria-hidden="true" class="header-anchor">#</a> Post</h2> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">view</span><span class="token punctuation">:</span> post
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> post
+<span class="token key atrule">lang</span><span class="token punctuation">:</span> pt<span class="token punctuation">-</span>br             <span class="token comment"># Lang by locale of post (required)</span>
+<span class="token key atrule">author</span><span class="token punctuation">:</span> ktquez          <span class="token comment"># Nickname author </span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> My First post
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 
+<span class="token key atrule">excerpt</span><span class="token punctuation">:</span>
+<span class="token key atrule">cover</span><span class="token punctuation">:</span> <span class="token boolean important">true             </span><span class="token comment"># If true it displays the cover image of the post, if it has no image, leave it as false</span>
+<span class="token key atrule">coverExt</span><span class="token punctuation">:</span>               <span class="token comment"># If you want to specify the image extension, PNG is the default</span>
+<span class="token key atrule">coverAlt</span><span class="token punctuation">:</span>               <span class="token comment"># cover alt text</span>
+<span class="token key atrule">demo</span><span class="token punctuation">:</span>                   <span class="token comment"># If you have demo link, insert here, to display the demo demo button in post</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> vuejs               <span class="token comment"># slug of category</span>
+  <span class="token punctuation">-</span> javascript
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> 
+  <span class="token punctuation">-</span> tag1                <span class="token comment"># You may feel free to create tags, it will be used on the category page</span>
+  <span class="token punctuation">-</span> tag2
+  <span class="token punctuation">-</span> tag3
+<span class="token key atrule">created_at</span><span class="token punctuation">:</span> 2018<span class="token punctuation">-</span>08<span class="token punctuation">-</span>22 11<span class="token punctuation">:</span><span class="token number">00 </span>
+<span class="token key atrule">updated_at</span><span class="token punctuation">:</span> 2018<span class="token punctuation">-</span>08<span class="token punctuation">-</span>22 11<span class="token punctuation">:</span><span class="token number">00</span>
+<span class="token key atrule">meta</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">property</span><span class="token punctuation">:</span> og<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain.com/images/posts/my<span class="token punctuation">-</span>first<span class="token punctuation">-</span>post.png
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> twitter<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain/images/posts/my<span class="token punctuation">-</span>first<span class="token punctuation">-</span>post.png
+<span class="token punctuation">---</span>
+</code></pre></div><p><strong>For more examples, just see the <a href="https://github.com/ktquezplay/webapp/tree/master/src/en/posts" target="_blank" rel="noopener noreferrer">posts of Ktquez play<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></strong></p> <h2 id="category"><a href="#category" aria-hidden="true" class="header-anchor">#</a> Category</h2> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">view</span><span class="token punctuation">:</span> category
+<span class="token key atrule">lang</span><span class="token punctuation">:</span> pt<span class="token punctuation">-</span>br       <span class="token comment"># Lang by locale of post (required)</span>
+<span class="token key atrule">order</span><span class="token punctuation">:</span> <span class="token number">1          </span><span class="token comment"># Order of display in list categories</span>
+<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token boolean important">true         </span><span class="token comment"># Include category in navigation Top</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Vue.js
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 
+<span class="token key atrule">excerpt</span><span class="token punctuation">:</span> 
+<span class="token key atrule">slug</span><span class="token punctuation">:</span> vuejs       <span class="token comment"># Used in post yaml for the array of categories</span>
+<span class="token punctuation">---</span>
+</code></pre></div><h2 id="author"><a href="#author" aria-hidden="true" class="header-anchor">#</a> Author</h2> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">view</span><span class="token punctuation">:</span> author
+<span class="token key atrule">lang</span><span class="token punctuation">:</span> pt<span class="token punctuation">-</span>br                       <span class="token comment"># Lang by locale of post (required)</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Articles by Alan Ktquez
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 
+<span class="token key atrule">name</span><span class="token punctuation">:</span> Alan Ktquez
+<span class="token key atrule">nickname</span><span class="token punctuation">:</span> ktquez                  <span class="token comment"># Used in post yaml to indicate the author</span>
+<span class="token key atrule">role</span><span class="token punctuation">:</span> Web developer
+<span class="token key atrule">avatar</span><span class="token punctuation">:</span> /authors/avatar_author.png
+<span class="token key atrule">created_at</span><span class="token punctuation">:</span> <span class="token datetime number">2018-08-22</span>
+<span class="token key atrule">social</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> twitter
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//twitter.com/author
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> github
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/author
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> site
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//author_site.com
+<span class="token key atrule">meta</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">property</span><span class="token punctuation">:</span> og<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain.com/authors/avatar_author.png
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> twitter<span class="token punctuation">:</span>image
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//my_domain.com/authors/avatar_author.png
+<span class="token punctuation">---</span>
+</code></pre></div><h2 id="page"><a href="#page" aria-hidden="true" class="header-anchor">#</a> Page</h2> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">view</span><span class="token punctuation">:</span> page
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 
+<span class="token key atrule">excerpt</span><span class="token punctuation">:</span> 
+<span class="token key atrule">ctaContact</span><span class="token punctuation">:</span> <span class="token boolean important">true    </span><span class="token comment"># Show call-to-action to contact page. If there is no contact page, set it to false</span>
+<span class="token punctuation">---</span>
+</code></pre></div><h1 id="override-css-stylus"><a href="#override-css-stylus" aria-hidden="true" class="header-anchor">#</a> Override CSS (Stylus)</h1> <p>To overwrite the theme variables to customize colors and etc, simply create a file in <code>.vuepress/override.styl</code>, por exemplo:</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token variable-declaration"><span class="token variable">$primaryColor</span> <span class="token operator">=</span> <span class="token hexcode">#AE4967</span></span>
+<span class="token variable-declaration"><span class="token variable">$accentColor</span> <span class="token operator">=</span> <span class="token hexcode">#35495E</span></span>
+
+<span class="token variable-declaration"><span class="token variable">$color1</span> <span class="token operator">=</span> <span class="token hexcode">#41b883</span></span>
+<span class="token variable-declaration"><span class="token variable">$colorImageFallback</span> <span class="token operator">=</span> $accentColor</span>
+
+<span class="token variable-declaration"><span class="token variable">$firstFooterColor</span> <span class="token operator">=</span> <span class="token hexcode">#35495E</span></span>
+<span class="token variable-declaration"><span class="token variable">$secondFooterColor</span> <span class="token operator">=</span> <span class="token hexcode">#263647</span></span>
+</code></pre></div><p><strong>To see all the variables, <a href="https://github.com/ktquez/vuepress-theme-ktquez/blob/master/styles/config.styl" target="_blank" rel="noopener noreferrer">access this link<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></strong></p> <h1 id="the-best-pratice-of-accessibility-includes"><a href="#the-best-pratice-of-accessibility-includes" aria-hidden="true" class="header-anchor">#</a> The best pratice of accessibility includes</h1> <p>The theme uses some plugins from the <a href="https://github.com/vue-a11y" target="_blank" rel="noopener noreferrer">Vue A11y project<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ul><li><a href="https://github.com/vue-a11y/vue-announcer" target="_blank" rel="noopener noreferrer">Vue announcer<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>;</li> <li><a href="https://github.com/vue-a11y/vue-skip-to" target="_blank" rel="noopener noreferrer">Vue skip to<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>;</li></ul> <p>In addition to good practices such as:</p> <ul><li>Nocturne mode</li> <li>Customization of alternative texts in images;</li> <li>Card posts with descriptive links using aria-labelledby;</li> <li>Among others</li></ul> <h1 id="lazy-load"><a href="#lazy-load" aria-hidden="true" class="header-anchor">#</a> Lazy-load</h1> <p>It is possible to delay media loading using the global component <lazy-load>.</lazy-load></p> <p>In any markdown files you can to use this component, for example load a Youtube video</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lazy-load</span> <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>iframe<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ src: <span class="token punctuation">'</span>https://www.youtube.com/watch?v=lIv1ItUzktc<span class="token punctuation">'</span> }<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>Or for images:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lazy-load</span> <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ src: <span class="token punctuation">'</span>https://octodex.github.com/images/stormtroopocat.jpg<span class="token punctuation">'</span>, alt: <span class="token punctuation">'</span>The Stormtroopocat<span class="token punctuation">'</span> }<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>This component uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">IntersectionObserver API<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to display the elements.
+You can check <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Browser_compatibility" target="_blank" rel="noopener noreferrer">this link for support of this API<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>If you want to use and support older browsers, you can use <a href="https://github.com/w3c/IntersectionObserver" target="_blank" rel="noopener noreferrer">this polyfill<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h1 id="and-more"><a href="#and-more" aria-hidden="true" class="header-anchor">#</a> And more</h1> <h2 id="anaytics-campaign-in-posts"><a href="#anaytics-campaign-in-posts" aria-hidden="true" class="header-anchor">#</a> Anaytics campaign in posts</h2> <p>All posts sharing icons links are included in analytics campaign parameters.<br> <code>?utm_source=SOCIALNAMECLICKED&amp;utm_medium=share&amp;utm_campaign=single-post</code></p> <blockquote><p>With this you can analyze the interaction and shares of your posts.</p></blockquote> <h2 id="fonts"><a href="#fonts" aria-hidden="true" class="header-anchor">#</a> Fonts</h2> <p>The theme have as fonts:</p> <ul><li><a href="https://fonts.google.com/specimen/Poppins" target="_blank" rel="noopener noreferrer">Poppins<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - All site</li> <li><a href="https://sourcefoundry.org/hack/" target="_blank" rel="noopener noreferrer">Hack<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - For code blocks</li></ul> <blockquote><p>To overwrite the fonts, simply use the <code>.vuepress/style.styl</code>. <a href="https://vuepress.vuejs.org/default-theme-config/#migrate-your-styles-to-style-styl" target="_blank" rel="noopener noreferrer">Ver doc vuepress<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p><strong>This theme adopts the strategy to load Web fonts using FontFaceObserver</strong></p> <h2 id="assets"><a href="#assets" aria-hidden="true" class="header-anchor">#</a> Assets</h2> <p>You can copy some assets from the <a href="https://github.com/ktquez/vuepress-theme-ktquez/tree/master/public" target="_blank" rel="noopener noreferrer">public folder of the theme<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, they server for you to configure some images as well as files to turn your blog into a PWA (for example the file <a href="https://github.com/ktquez/vuepress-theme-ktquez/tree/master/public" target="_blank" rel="noopener noreferrer">manifest.json<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>).</p> <h2 id="ads"><a href="#ads" aria-hidden="true" class="header-anchor">#</a> Ads</h2> <p>You can also insert ads in the blog, which are displayed in the sidebar of the home page and the right side of the post.
+Ads are built through an array of objects that we can insert into each themeConfig locale, <a href="https://github.com/ktquezplay/webapp/blob/master/src/.vuepress/config/locales/en/ads.js" target="_blank" rel="noopener noreferrer">example taken from my personal blog<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>For example:</p> <div class="language-js extra-class"><pre class="language-js"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+      ads<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          text<span class="token punctuation">:</span> <span class="token string">'Did you know that Udemy has more than 300 web development courses for only R $ 21.99?'</span><span class="token punctuation">,</span>
+          link<span class="token punctuation">:</span> <span class="token string">'http://bit.ly/web-development-udemy'</span><span class="token punctuation">,</span>
+          image<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            src<span class="token punctuation">:</span> <span class="token string">'/web-development-english.png'</span><span class="token punctuation">,</span>
+            alt<span class="token punctuation">:</span> <span class="token string">'Illustration of a user studying online'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          by<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            text<span class="token punctuation">:</span> <span class="token string">'udemy.com'</span><span class="token punctuation">,</span>
+            link<span class="token punctuation">:</span> <span class="token string">'http://bit.ly/all-courses-udemy'</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/pt/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+      ads<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          text<span class="token punctuation">:</span> <span class="token string">'Você sabia que a Udemy tem mais de 300 cursos de desenvolvimento web por apenas R$ 21,99?'</span><span class="token punctuation">,</span>
+          link<span class="token punctuation">:</span> <span class="token string">'http://bit.ly/desenvolvimento-web-em-portugues-udemy'</span><span class="token punctuation">,</span>
+          image<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            src<span class="token punctuation">:</span> <span class="token string">'/web-development-portugues.png'</span><span class="token punctuation">,</span>
+            alt<span class="token punctuation">:</span> <span class="token string">'Ilustração de um usuário estudando online'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          by<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            text<span class="token punctuation">:</span> <span class="token string">'udemy.com'</span><span class="token punctuation">,</span>
+            link<span class="token punctuation">:</span> <span class="token string">'http://bit.ly/all-courses-udemy'</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Note, avoid placing words that indicate that it is an ad, to avoid blocking Adblock</strong></p> <h2 id="tools"><a href="#tools" aria-hidden="true" class="header-anchor">#</a> Tools</h2> <p>Tools that can help you:</p> <ul><li><a href="https://blog.tersmitten.nl/slugify/" target="_blank" rel="noopener noreferrer">Slugify<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - Slug generation, for your links and filenames;</li> <li><a href="http://www.responsivebreakpoints.com/" target="_blank" rel="noopener noreferrer">Responsive breakpoints<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - Responsive image breakpoints generator for cover images;</li> <li><a href="http://www.codeorama.com/seo/counter/" target="_blank" rel="noopener noreferrer">SEO Counter<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - Is an online word and character counter with SEO rules for title and description;</li></ul> <h2 id="license"><a href="#license" aria-hidden="true" class="header-anchor">#</a> License</h2> <p><a href="https://github.com/ktquez/vuepress-theme-ktquez/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="contributing"><a href="#contributing" aria-hidden="true" class="header-anchor">#</a> Contributing</h2> <ul><li>Check the open issues or open a new issue to start a discussion around your feature idea or the bug you found.</li> <li>Fork repository, make changes and send a pull request</li></ul> <p>If you want a faster communication, find me on <a href="https://twitter.com/ktquez" target="_blank" rel="noopener noreferrer">@ktquez<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><strong>Thank you</strong></p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.7660fa50.js" defer></script><script src="/assets/js/4.f50508c8.js" defer></script>
+  </body>
+</html>

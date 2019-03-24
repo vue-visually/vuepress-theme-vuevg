@@ -232,6 +232,10 @@
 <style lang="stylus">
 @import '~@theme/styles/config.styl'
 
+.container.main
+  background-color: tan
+  z-index: 10
+
 .page-header-cat
   margin-top: 14px
 

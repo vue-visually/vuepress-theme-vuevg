@@ -3,11 +3,12 @@
     class="header" 
     :class="{ 'header--search-open': searchOpened }"
     itemscope itemtype="https://schema.org/Organization">
-    <navigation class="header-navigation" v-if="$themeConfig.topNavigation" />
-    <div class="row header-top">
+    <navigation style="z-index:6" class="header-navigation" v-if="$themeConfig.topNavigation" />
+    <div class="row header-top" style="z-index: 10">
       <div class="column xs-33 sm-20">
-        <menu-hamburguer 
-          class="header-top__hamburguer"
+        <menu-Hamburger 
+          class="header-top__Hamburger"
+          style="z-index:100"
           :open="openMenu"
           @click="toggleMenuMobile" />
 
@@ -32,7 +33,7 @@
       </div>
       <div class="column xs-33 sm-20">
         <search class="header-top__search" />
-        <black-white v-if="$themeConfig.blackWhite" class="header-top__toggle" />
+        <!-- <black-white v-if="$themeConfig.blackWhite" class="header-top__toggle" /> -->
       </div>
     </div>
   </header>
@@ -41,7 +42,7 @@
 <script>
   import Logo from '@theme/components/Logo'
   import Search from '@theme/components/Header/Search'
-  import MenuHamburguer from '@theme/components/Hamburguer'
+  import MenuHamburger from '@theme/components/Hamburger'
   import Navigation from '@theme/components/Header/Navigation'
   
   import EventBus from '@theme/plugins/EventBus'
@@ -53,7 +54,7 @@
       Logo,
       Search,
       Navigation,
-      MenuHamburguer,
+      MenuHamburger,
       Languages: () => import(/* webpackChunkName = Languages */ '@theme/components/Header/Languages'),
       BlackWhite: () => import(/* webpackChunkName = BlackWhite */ '@theme/components/BlackWhite')
     },
@@ -106,7 +107,7 @@
   padding: 30px 20px 24px
   background-color: white
   
-  &__hamburguer
+  &__Hamburger
     position: relative
     transform: rotate(90deg)
 

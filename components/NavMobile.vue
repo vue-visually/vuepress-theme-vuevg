@@ -1,5 +1,6 @@
 <template>
-  <nav 
+  <nav
+    style="z-index:6"
     class="container nav-mobile"
     aria-label="Navigation" 
     itemscope itemtype="https://schema.org/SiteNavigationElement">

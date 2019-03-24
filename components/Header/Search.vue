@@ -43,7 +43,7 @@
        </nav>
       </div>
     </transition>
-    <span class="icon search__icon" v-html="getIcon" @click="toggle"></span>
+    <span class="icon search__icon" style="z-index: 6" v-html="getIcon" @click="toggle"></span>
   </div>
 </template>
 

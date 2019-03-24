@@ -1,6 +1,7 @@
 <template>
   <div 
     class="layout-main" 
+    style="background-image: url('/watermark-logo.png');background-size: cover;  background-repeat: no-repeat"
     :class="{ 'layout-main__nm--opened': nmOpened, 'layout-main__negative': negative }"
     itemscope itemtype="https://schema.org/WebPage">
 
@@ -171,7 +172,7 @@
 
   &__negative
     &.layout-main__nm--opened,
-    *:not(.no_bw):not([class*='switch-bw']):not([class*='hamburguer__']):not([class*='language-']):not(code):not(.token)
+    *:not(.no_bw):not([class*='switch-bw']):not([class*='Hamburger__']):not([class*='language-']):not(code):not(.token)
       background-color: black !important
       color: #ccc !important
       box-shadow: none !important
@@ -224,4 +225,5 @@
     transform: translate(-100%) !important;
     position: absolute !important;
   }
+  
 </style>
