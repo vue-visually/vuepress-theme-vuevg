@@ -24,7 +24,7 @@ module.exports = {
   article: 'Post',
   text_comments: 'Leave us a comment, what do you think?',
   tip_contact: 'Contact us',
-  title_contact: 'Want to partner? Let\'s have a chat, have coffee.',
+  title_contact: 'Contact us',
   refresh: 'Refresh',
   has_loaded: 'has loaded',
   turnon_night_mode: 'Turn on night mode',
@@ -33,7 +33,7 @@ module.exports = {
   // No posts
   no_more_posts: 'Soon we\'ll have more articles',
   no_categories: 'We currently have no categories',
-  no_author_posts: 'The Author has not posted any article yet',
+  no_author_posts: 'The Author has not posted any articles yet',
   no_category_posts: 'We\'ll soon have articles for this category',
   // Newsletter
   stay_in: 'Stay in',
@@ -41,7 +41,7 @@ module.exports = {
   subscribe: 'subscribe',
   // 404 page
   title_404: 'Opsss! You\'re lost, I\'ll help you..',
-  text_404: 'We apologize for the inconvenience if the link you clicked is down, but we resolve it easy, just click the button below to return to the homepage. We\'ll see you there.',
+  text_404: 'Click the button below to return to the homepage. ',
   back_to_homepage: 'Back to home page',
   // Translate routes
   path_route_categories: 'categories',
@@ -52,7 +52,7 @@ module.exports = {
   path_route_privacy: 'privacy',
   path_route_search: 'contact',
   // Aria
-  aria_label_search: 'Type what subject you want to search for',
+  aria_label_search: 'Type the subject you want to search for',
   labelledby_cat_card_post: 'See all posts from this category',
   labelledby_post_card_post: 'See post about',
   // Placeholders
